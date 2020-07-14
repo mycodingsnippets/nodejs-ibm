@@ -6,6 +6,7 @@ var dbCloudantConnect = require('./config/db-conn.js');
 const indexRoute = require('./routes/index');
 
 const app = express();
+require('dotenv').config();
 
 const appEnv = cfEnv.getAppEnv();
 const port = appEnv.port;
@@ -19,6 +20,8 @@ dbCloudantConnect.db
         mydb = database;
     });
 
+
+console.log(process.env.TEST_DATA);
 
 app.use('/', indexRoute);
 
