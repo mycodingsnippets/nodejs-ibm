@@ -1,0 +1,5 @@
+---
+applications:
+ - name: dotcomengineer
+   random-route: true
+   memory: 256M
